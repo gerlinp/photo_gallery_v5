@@ -1,0 +1,9 @@
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+img {
+    padding: 10px;
+    margin: 0 auto;
+}
