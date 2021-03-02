@@ -1,3 +1,3 @@
-baguetteBox.run('.gallery', {
+baguetteBox.run('.grid', {
     // Custom options
 });
