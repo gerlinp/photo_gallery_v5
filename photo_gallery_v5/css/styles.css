@@ -8,15 +8,16 @@ body {
     margin: 0 auto;
     max-width: 56em;
     padding: 1em 0;
-    
+    background: #2d3945;;
     clear: both;
 }
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-rows: minmax( 150px,auto);
-    grid-gap: 1.5em;
+    grid-gap: 1em;
 }
+
 
 img {
     max-width: 100%;
@@ -25,6 +26,15 @@ img {
     transition: opacity 0.25s ease-in-out;  
     padding: 0px;
 }
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
 input{
     padding: 20px;
     margin-bottom:  0px;
@@ -36,3 +46,39 @@ input{
     margin-bottom: 10px;
 }
 
+/* Photo Overlay */
+.photo {
+	position: relative;
+	line-height: 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+.photo-container img {
+    max-width: 100%;
+}
+
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .65);
+}
+
+.photo-overlay {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .4s;
+  }
+.photo-overlay:hover {
+      opacity: 1;
+  }
