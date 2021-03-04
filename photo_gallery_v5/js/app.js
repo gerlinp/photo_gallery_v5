@@ -12,9 +12,9 @@ const searchBar = forms['search-images'].querySelector('input');
 
 searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
-  const images = list.getElementsByTagName('li');
+  const images = list.getElementsByTagName('a');
   Array.from(images).forEach((image) => {
-    const title = image.firstElementChild.textContent;
+    const title = image.getAttribute("data-caption");
     if(title.toLowerCase().indexOf(e.target.value) != -1){
       image.style.display = 'block';
     } else {
