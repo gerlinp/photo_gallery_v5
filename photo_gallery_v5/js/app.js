@@ -15,7 +15,7 @@ searchBar.addEventListener('keyup', (e) => {
   const images = list.getElementsByTagName('a');
   Array.from(images).forEach((image) => {
     const title = image.getAttribute("data-caption");
-    if(title.toLowerCase().indexOf(e.target.value) != -1){
+    if(title.toLowerCase().indexOf(term.toLowerCase()) != -1){
       image.style.display = 'block';
     } else {
       image.style.display = 'none';
